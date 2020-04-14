@@ -1,0 +1,7 @@
+﻿#SaasUserAccount (AppAccont)
+#2020年4月3日 13:51:23
+#Linengneng
+
+此类为Saas 平台App 用户账户类别
+
+使用MongoDB 存储方案操作

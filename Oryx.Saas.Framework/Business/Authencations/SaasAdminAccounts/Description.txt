@@ -1,0 +1,7 @@
+﻿#SaasAdminAccounts (AppAccont)
+#2020年4月3日 13:51:23
+#Linengneng
+
+此类为Saas平台用户账户类别
+
+使用Mysql EFCore 方案操作

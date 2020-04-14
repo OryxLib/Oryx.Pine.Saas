@@ -1,0 +1,12 @@
+﻿#SaasServiceSection (Admin)
+#2020年4月3日 13:51:23
+#Linengneng
+
+Saas Service Section 
+主要存储Saas用户的业务数据
+包括:
+1. AppHeader
+2. 接口调用状态
+3. 接口性能分析
+4. 账户余额
+5. 存储用量

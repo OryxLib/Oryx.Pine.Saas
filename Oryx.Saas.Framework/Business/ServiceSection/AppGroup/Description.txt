@@ -1,0 +1,18 @@
+﻿#AppGroup (Admin)
+#2020年4月3日 13:51:23
+#Linengneng
+
+ AppGroup Section 
+
+主要存储Saas用户下的Appgroup 用户数据
+包括: 
+
+1. AppGroup Structure (AppGroup的数据结构)
+2. AppGroup Data (AppGroup的数据)
+
+主要存储形式为MongoDB
+
+其中: AppGroup Structure 的数据结构包含
+1. 内置数据结构  AppUserAccount (会员等级等功能)
+2. 内置数据结构  CMS
+3. 自定义数据结构 Headless CMS

@@ -1,0 +1,7 @@
+﻿#TopAdminAccounts (Admin)
+#2020年4月3日 13:51:23
+#Linengneng
+
+此类为整个系统顶级账户类别
+
+使用MySQL EFCore 方案操作

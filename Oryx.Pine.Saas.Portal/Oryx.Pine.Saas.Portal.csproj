@@ -1,0 +1,93 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Admin\Views\View\**" />
+    <Compile Remove="wwwroot\manageapp\node_module\**" />
+    <Content Remove="Areas\Admin\Views\View\**" />
+    <Content Remove="wwwroot\manageapp\node_module\**" />
+    <EmbeddedResource Remove="Areas\Admin\Views\View\**" />
+    <EmbeddedResource Remove="wwwroot\manageapp\node_module\**" />
+    <None Remove="Areas\Admin\Views\View\**" />
+    <None Remove="wwwroot\manageapp\node_module\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Areas\Admin\Views\Shared\_FormDataPartialView.cshtml" />
+    <Content Remove="Areas\Admin\Views\Shared\_FormDataPartialView_Scripts.cshtml" />
+    <Content Remove="Areas\Admin\Views\Shared\_IndexListPartialView.cshtml" />
+    <Content Remove="Areas\Admin\Views\Shared\_IndexListPartialView_Scripts.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.Authentication.WeChat" Version="2.0.1" />
+    <PackageReference Include="IdentityServer4" Version="3.1.2" />
+    <PackageReference Include="IdentityServer4.AspNetIdentity" Version="3.1.2" />
+    <PackageReference Include="IdentityServer4.EntityFramework" Version="3.1.2" />
+    <PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Oryx.Saas.Framework\Oryx.Saas.Framework.csproj" />
+    <ProjectReference Include="..\Oryx.Utilities\Oryx.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\Error.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\_Layout_noWrap.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Areas\Admin\Views\_ViewImports.cshtml" />
+    <None Include="Areas\Admin\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="AspIdUser.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IdentityDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\DataAPi\Data\" />
+    <Folder Include="Areas\DataAPi\Models\" />
+    <Folder Include="Areas\DataAPi\Views\" />
+    <Folder Include="Areas\Frontend\Controllers\" />
+    <Folder Include="Areas\Frontend\Data\" />
+    <Folder Include="Areas\Frontend\Models\" />
+    <Folder Include="Areas\Frontend\Views\" />
+    <Folder Include="Areas\Frontend\ApiControllers\" />
+    <Folder Include="Areas\Headless\Data\" />
+    <Folder Include="Areas\Headless\Models\" />
+    <Folder Include="Areas\Headless\ApiControllers\" />
+    <Folder Include="Areas\Identity\Data\" />
+    <Folder Include="Areas\Identity\Models\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+
+</Project>

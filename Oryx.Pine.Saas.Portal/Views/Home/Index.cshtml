@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1 class="display-4">松叶云</h1>
+    <p class="lead">新一代智能服务云,0秒接入,快速实现您的业务</p>
+    <hr class="my-4">
+    <p></p>
+    <a class="btn btn-primary btn-lg" href="~/document/" role="button">查看文档</a>
+</div>
+
+<div class="text-center" style="margin-top: 20px;">
+    <div style="color:#0366d6">Demo:</div>
+    <div class="demo-item"><a href="~/DemoApps/Authorize/index.html">认证</a></div>
+    <div class="demo-item"> <a href="~/DemoApps/IM/index.html">IM</a></div>
+</div> 
+
+@section Scripts{
+    <script src="~/vanta/vendor/three.r95.min.js"></script>
+    <script src="~/vanta/dist/vanta.clouds2.min.js"></script>
+    <script>
+        VANTA.CLOUDS2({
+            el: ".jumbotron",
+            mouseControls: true,
+            touchControls: true,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            texturePath: "/vanta/gallery/noise.png"
+        })
+    </script>
+}

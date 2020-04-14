@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Oryx.Saas.Framework.Model
+@{
+
+    var modelTable = ViewData["ModelTable"] as ModelTable;
+}
+<span class="layui-breadcrumb">
+    <a href="/Admin">首页</a>
+    <a href="/AppHeader/">应用</a>
+    <a href="/AppStruct/">数据表</a>
+    <a><cite>数据列</cite></a>
+</span>
+<div style="overflow:auto;">
+    <table class="layui-table" id="mainTable" lay-filter="mainTable">
+    </table>
+</div>
+

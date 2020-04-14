@@ -1,0 +1,35 @@
+﻿配置IdentityServer4 需要主要几点
+
+理论上, 资源(resource),IdentityServer,客户端(client) 是分离的
+
+IdentityServer通过配置资源(resource)和客户端访问方式,从而达到使用户登录后可以通过指定客户端权限,查看指定客户端资源
+
+
+本系统设计需要分为两种资源:
+
+内置资源,系统初始化时使用的资源
+	包含: 管理员认证系统
+		 客户端认证系统
+		 用户客户端配置
+
+用户资源, 用户资源通过用户自定义配置使用
+	包含:  
+		客户端通过分配saas用户不同的clientid 实现对接
+
+关于用户隔离: 在配置AddIdentity时,因为数据库上下文的缘故,所以单站点情况下,暂时不进行用户隔离,只进行权限隔离
+
+
+#Identity Server 配置
+
+Identity Server 在写入Ef时,需要依赖 Microsoft.AspNetCore.Identity.EntityFrameworkCore 
+
+
+dotnet ef migrations add InitialIdentityServerPersistedGrantDbMigration -c PersistedGrantDbContext -o Data/Migrations/IdentityServer/PersistedGrantDb
+dotnet ef migrations add InitialIdentityServerConfigurationDbMigration -c ConfigurationDbContext -o Data/Migrations/IdentityServer/ConfigurationDb
+dotnet ef migrations add InitialIdentityServerSaasAuthenticationDbMigration -c SaasAuthenticationDbContext -o Data/Migrations/IdentityServer/AuthenticationDb
+
+dotnet ef database update -c PersistedGrantDbContext
+dotnet ef database update -c ConfigurationDbContext
+dotnet ef database update -c SaasAuthenticationDbContext
+
+

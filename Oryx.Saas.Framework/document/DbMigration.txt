@@ -1,0 +1,6 @@
+﻿# 此文件记录db migration 的操作指令. 因为涉及到三个不同的DbContext 特此记录
+# 内置DbContext: SaasServiceDbContext
+# 外置: IdentityServer4 PersistedGrantDbContext, ConfigurationDbContext
+add-migration InitDatabase -Context SaasServiceDbContext
+add-migration InitPerDatabase -Context PersistedGrantDbContext
+add-migration InitConfDatabase -Context ConfigurationDbContext
