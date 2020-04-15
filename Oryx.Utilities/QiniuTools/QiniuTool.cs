@@ -20,11 +20,8 @@ namespace Oryx.Utilities
         }
         public static string GenerateToken(string fileName)
         {
-            string AK = "vRlRmKlkqx9qY9CTWTinD-OJowSeYw5-Vg1nktUA";
-            string SK = "4gGxVhemV8DENWtUAJqs1L_xTq5QlazSnnkXfwgP";
-
-            //string AK = "vRlRmKlkqx9qY9CTWTinD-OJowSeYw5-Vg1nktUA";
-            //string SK = "4gGxVhemV8DENWtUAJqs1L_xTq5QlazSnnkXfwgP";
+            string AK = "";
+            string SK = "";
 
             // ZoneID zoneId = ZoneID.CN_East; 
             // [CN_East:华东] [CN_South:华南] [CN_North:华北] [US_North:北美]
